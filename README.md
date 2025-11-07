@@ -1,71 +1,77 @@
-# Getting Started with Create React App
+🧩 Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single-page ReactJS web application that implements a responsive Contact Form based on the provided Adobe XD / Figma design.
+The form integrates with the Vernan Backend Contact API and validates user input before submission.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+🧠 Frontend Validation
+Prevents empty submissions
+Validates email format
+Validates 10-digit phone number
 
-### `npm start`
+🌐 API Integration
+Endpoint: https://vernanbackend.ezlab.in/api/contact-us/
+Method: POST
+Content-Type: application/json
+Displays “✅ Form Submitted Successfully!” when a 200/201 response is received
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+💻 Responsive Design
+Optimized for:
+Mobile (480 px)
+Tablet (720 p, iPad 2732×2048)
+Laptop/Desktop (1080 p, MacBook 1440×823)
+Implemented using Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🎨 Modern UI/UX
+Smooth gradients, rounded corners, and hover transitions
+Real-time status messages for errors and success
+Disabled “Submit” button during submission
 
-### `npm test`
+🛠️ Tech Stack
+ReactJS – Frontend framework
+Axios – For API requests
+Tailwind CSS – For styling and responsiveness
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📁 Project Structure
+src/
+ ├── components/
+ │   └── ContactForm.jsx
+ ├── App.js
+ ├── index.js
+ ├── index.css
+ └── tailwind.config.js
 
-### `npm run build`
+⚙️ Installation & Setup
+Clone the repository
+git clone <(https://github.com/Disha0413/EZ-Labs-React-Contact-Form)>
+cd ezlabs-contactform
+Install dependencies
+npm install
+Run the app
+npm start
+The app will open at http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📬 API Request Example
+POST https://vernanbackend.ezlab.in/api/contact-us/
+{
+  "name": "Amit",
+  "email": "hsatyamrav@gmail.com",
+  "phone": "908765498",
+  "message": "kjhgcgj"
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Response Code: 200
+💬 UI Output: “Form Submitted Successfully!”
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🧾 Validation Cases
+Case	Behavior
+Empty fields	Displays “⚠️ Please fill out all fields.”
+Invalid email	Displays “⚠️ Invalid email address.”
+Invalid phone	Displays “⚠️ Please enter a valid 10-digit phone number.”
+API success	Displays “✅ Form Submitted Successfully!
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# EZ-Labs-React-Contact-Form
+🧠 Developer Notes
+Console logs are optional and not required in the final submission.
+The design follows the Figma reference for both desktop and mobile layouts.
+All API calls use proper headers for JSON communication.
